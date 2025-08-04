@@ -11,6 +11,8 @@ RUN npm install
 # Step 4: Copy rest of the app source code
 COPY . .
 
+RUN npm install
+
 # Step 5: Build the React app
 RUN npm run build
 
