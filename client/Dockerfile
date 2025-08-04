@@ -5,11 +5,11 @@ FROM node:18 AS build
 WORKDIR /app
 
 # Copy only client package files and install dependencies
-COPY client/package*.json ./
+COPY package*.json ./
 RUN npm install
 
 # Copy full client source code
-COPY client/ ./
+COPY . ./
 
 # Build the app
 RUN npm run build
